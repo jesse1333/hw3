@@ -86,9 +86,14 @@ int main(int argc, char* argv[])
     print(head);
 
     // Test out your linked list code
+    Node* list = nullptr;
+	Node* small = (Node*) &list; // set to a non-null address
+	Node* large = (Node*) &list; // set to a non-null address
+	llpivot(list, small, large, 42);
 
-
-
+    if (small == nullptr) {
+        cout << "yea";
+    }
     
     return 0;
 
